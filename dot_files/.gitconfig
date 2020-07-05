@@ -1,0 +1,9 @@
+[user]
+	name = Jimmy-sha256
+	email = Jimmy_sha256@protonmail.com
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[core]
+	excludesfile = /home/jim/.gitignore_global

@@ -1,0 +1,18 @@
+.titlebar {
+    background: #0759EB;
+}
+
+.titlebar:backdrop  {
+    background: #4f4d4d;
+    color:white;
+} 
+decoration {
+    border: 2px solid #0759EB;
+    background: #0759EB;
+}
+
+decoration:backdrop {
+    border: 2px solid #4f4d4d;
+    background: #4f4d4d;
+}
+

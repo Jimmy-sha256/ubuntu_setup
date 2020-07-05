@@ -1,0 +1,16 @@
+set editing-mode vi
+
+# show vi mode in command prompt
+set show-mode-in-prompt on
+
+set vi-ins-mode-string "INSERT"
+set vi-cmd-mode-string "NORMAL"
+
+# Remap ESC to use double 'i' keypress to toggle insert or normal
+
+$if mode=vi
+    set keymap vi-command
+    "ii": vi-insertion-mode
+    set keymap vi-insert
+    "ii": vi-movement-mode
+$endif
