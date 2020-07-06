@@ -8,6 +8,12 @@ sudo apt upgrade -y
 
 sudo apt install git
 
+```
+
+Copy public.gpg and secret.gpg from airgapped secure storage to /home/jim/ 
+
+```
+
 sudo git clone https://github.com/Jimmy-sha256/ubuntu_setup.git
 
 cd ubuntu_setup
