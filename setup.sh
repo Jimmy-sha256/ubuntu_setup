@@ -34,4 +34,6 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 35
 
 gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']" # replace caps with ctrl
 
+gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'org.gnome.Terminal.desktop']"
+
 reboot
