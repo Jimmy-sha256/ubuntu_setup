@@ -1,5 +1,6 @@
 sudo apt install vim-gtk -y
 sudo apt install curl -y
+sudo apt install keepassx -y
 
 # import keys
 gpg --import /home/jim/secret.gpg
@@ -35,7 +36,7 @@ gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 35
 gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']" # replace caps with ctrl
 gsettings set org.gnome.desktop.session idle-delay 0 # set power saving to never
-gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop']" # edit app thumbnails
+gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'keepassx.desktop']" # edit app thumbnails
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' # set dark theme
 gsettings set org.gnome.desktop.background picture-uri file:///home/jim/Pictures/background.jpg
 
