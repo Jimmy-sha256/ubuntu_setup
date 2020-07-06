@@ -1,4 +1,3 @@
-sudo apt install git -y
 sudo apt install vim-gtk -y
 sudo apt install curl -y
 
