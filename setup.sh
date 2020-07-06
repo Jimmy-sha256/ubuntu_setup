@@ -42,6 +42,4 @@ dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6
 
 reboot
 
-git clone git@github.com:Jimmy-sha256/wiki.git
-
 sudo rm -rf /home/jim/ubuntu_setup/
