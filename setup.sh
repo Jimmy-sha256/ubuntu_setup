@@ -42,6 +42,7 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/jim/Pictures
 
 dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors false # disable terminal theme colors
 
+sudo rm -rf /home/jim/ubuntu_setup/
+
 reboot
 
-sudo rm -rf /home/jim/ubuntu_setup/
