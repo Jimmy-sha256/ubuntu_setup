@@ -13,19 +13,19 @@ shred -u -n 33 -z /home/jim/secret.gpg
 
 
 # transfer config files
-cp /home/jim/ubunt_setup/config_files/gpg-agent.conf /home/jim/.gnupg 
-cp /home/jim/ubunt_setup/config_files/sshcontrol /home/jim/.gnupg 
-cp /home/jim/ubunt_setup/config_files/gtk.css /home/jim/.config/gtk-3.0
+cp /home/jim/ubuntu_setup/config_files/gpg-agent.conf /home/jim/.gnupg 
+cp /home/jim/ubuntu_setup/config_files/sshcontrol /home/jim/.gnupg 
+cp /home/jim/ubuntu_setup/config_files/gtk.css /home/jim/.config/gtk-3.0
 
 # transfer dot files
-cp /home/jim/ubunt_setup/dot_files/.bash_profile /home/jim/
-cp /home/jim/ubunt_setup/dot_files/.bashrc /home/jim/
-cp /home/jim/ubunt_setup/dot_files/.gitconfig /home/jim/
-cp /home/jim/ubunt_setup/dot_files/.gitignore_global /home/jim/
-cp /home/jim/ubunt_setup/dot_files/.inputrc /home/jim/
-cp /home/jim/ubunt_setup/dot_files/.profile /home/jim/
-cp /home/jim/ubunt_setup/dot_files/.tmux.conf /home/jim/
-cp /home/jim/ubunt_setup/dot_files/.vimrc /home/jim/
+cp /home/jim/ubuntu_setup/dot_files/.bash_profile /home/jim/
+cp /home/jim/ubuntu_setup/dot_files/.bashrc /home/jim/
+cp /home/jim/ubuntu_setup/dot_files/.gitconfig /home/jim/
+cp /home/jim/ubuntu_setup/dot_files/.gitignore_global /home/jim/
+cp /home/jim/ubuntu_setup/dot_files/.inputrc /home/jim/
+cp /home/jim/ubuntu_setup/dot_files/.profile /home/jim/
+cp /home/jim/ubuntu_setup/dot_files/.tmux.conf /home/jim/
+cp /home/jim/ubuntu_setup/dot_files/.vimrc /home/jim/
 
 # dock settings
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
