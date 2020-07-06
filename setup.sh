@@ -36,4 +36,6 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']" # re
 
 gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'org.gnome.Terminal.desktop']"
 
+dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors false
+
 reboot
