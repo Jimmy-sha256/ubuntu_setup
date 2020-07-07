@@ -5,7 +5,7 @@ git clone git@github.com:Jimmy-sha256/archive.git
 
 gpg --decrypt /home/jim/archive/archive.gpg > /home/jim/archive.tar.gz
 
-shred -u -n 33 -z /home/jim/archive/
+rm -rf /home/jim/archive/
 
 tar xzf archive.tar.gz
 
