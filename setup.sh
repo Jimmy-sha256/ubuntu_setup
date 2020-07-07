@@ -1,4 +1,4 @@
-sudo apt install vim-gtk -y
+sudo apt install vim-gtk3 -y
 sudo apt install curl -y
 sudo apt install keepassx -y
 
