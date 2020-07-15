@@ -44,6 +44,21 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/jim/Pictures
 
 dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors false # disable terminal theme colors
 
+# keyboard shortcuts
+name="vim"
+binding="<CTRL><ALT>v"
+
+media_keys=org.gnome.settings-daemon.plugins.media-keys
+custom_kbd=org.gnome.settings-daemon.plugins.media-keys.custom-keybinding
+kbd_path=/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/$name/
+new_bindings=`gsettings get $media_keys custom-keybindings | sed -e"s>'\]>','$kbd_path']>"| sed -e"s>@as \[\]>['$kbd_path']>"
+`
+gsettings set $media_keys custom-keybindings "$new_bindings"
+gsettings set $custom_kbd:$kbd_path name $name
+gsettings set $custom_kbd:$kbd_path binding $binding
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/myaction/ command 'gnome-terminal -e vim --full-screen'
+
+# copy repos script into home directory
 cp /home/jim/ubuntu_setup/pull_repos.sh /home/jim/
 
 sudo rm -rf /home/jim/ubuntu_setup/
