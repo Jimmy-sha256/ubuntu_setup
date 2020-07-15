@@ -1,5 +1,4 @@
 # ubuntu_setup
-Initial setup for ubuntu
 
 ```
 sudo apt update
@@ -21,4 +20,11 @@ cd ubuntu_setup
 sudo chmod 777 setup.sh
 
 ./setup.sh
+```
+
+```
+cd
+
+sudo chmod 777 pull_repos.sh
+./pull_repos.sh
 ```
