@@ -1,5 +1,7 @@
 # ubuntu_setup
 
+* Initial update
+
 ```
 sudo apt update
 
