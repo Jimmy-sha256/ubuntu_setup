@@ -57,7 +57,7 @@ new_bindings=`gsettings get $media_keys custom-keybindings | sed -e"s>'\]>','$kb
 gsettings set $media_keys custom-keybindings "$new_bindings"
 gsettings set $custom_kbd:$kbd_path name $name
 gsettings set $custom_kbd:$kbd_path binding $binding
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/myaction/ command 'gnome-terminal -e vim --full-screen'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/myaction/ command 'gnome-terminal -e vim --maximize'
 
 # copy repos script into home directory
 cp /home/jim/ubuntu_setup/pull_repos.sh /home/jim/
