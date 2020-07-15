@@ -4,7 +4,7 @@ sudo apt install vim-gtk3 -y
 sudo apt install curl -y
 sudo apt install keepassx -y
 
-# import keys
+# import keys - need copying from airgapped storage to home dir
 gpg --import /home/jim/secret.gpg
 gpg --import /home/jim/public.gpg
 
@@ -13,7 +13,6 @@ echo -e "5\ny\n" |  gpg --command-fd 0 --expert --edit-key D5557B332830404939C27
 
 shred -u -n 33 -z /home/jim/public.gpg
 shred -u -n 33 -z /home/jim/secret.gpg
-
 
 # transfer config files
 cp /home/jim/ubuntu_setup/config_files/gpg-agent.conf /home/jim/.gnupg 
@@ -29,7 +28,6 @@ cp /home/jim/ubuntu_setup/dot_files/.inputrc /home/jim/
 cp /home/jim/ubuntu_setup/dot_files/.profile /home/jim/
 cp /home/jim/ubuntu_setup/dot_files/.tmux.conf /home/jim/
 cp /home/jim/ubuntu_setup/dot_files/.vimrc /home/jim/
-
 cp /home/jim/ubuntu_setup/background.jpg /home/jim/Pictures/
 
 # dock settings
@@ -64,6 +62,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 # copy repos script into home directory
 cp /home/jim/ubuntu_setup/pull_repos.sh /home/jim/
 
+# remove setup folder
 sudo rm -rf /home/jim/ubuntu_setup/
 
 reboot
