@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # pull repos
-git clone git@github.com:Jimmy-sha256/wiki.git
+# git clone git@github.com:Jimmy-sha256/wiki.git
 git clone git@github.com:Jimmy-sha256/archive.git
 
 # decrypt the .gpg
