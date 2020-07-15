@@ -26,5 +26,6 @@ sudo chmod 777 setup.sh
 cd
 
 sudo chmod 777 pull_repos.sh
+
 ./pull_repos.sh
 ```
