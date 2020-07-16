@@ -11,7 +11,7 @@ gpg --decrypt /home/jim/archive/archive.gpg > /home/jim/archive.tar.gz
 rm -rf /home/jim/archive/
 
 # extract archive
-tar xzf archive.tar.gz
+#tar xzf archive.tar.gz
 
 # remove archive.tar.gz
-shred -u -n 33 -z archive.tar.gz
+#shred -u -n 33 -z archive.tar.gz
