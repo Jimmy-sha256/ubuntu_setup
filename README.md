@@ -31,3 +31,11 @@ sudo chmod 777 pull_repos.sh
 
 ./pull_repos.sh
 ```
+
+```
+cd
+
+sudo chmod 777 python_setup.sh
+
+./python_setup.sh
+```
