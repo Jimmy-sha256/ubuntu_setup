@@ -61,6 +61,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 
 # copy repos script into home directory
 cp /home/jim/ubuntu_setup/pull_repos.sh /home/jim/
+cp /home/jim/ubuntu_setup/python_setup.sh /home/jim/
 
 # remove setup folder
 sudo rm -rf /home/jim/ubuntu_setup/
