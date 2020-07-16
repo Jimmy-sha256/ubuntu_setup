@@ -11,9 +11,10 @@ sudo apt install git
 
 ```
 
-Copy public.gpg and secret.gpg from airgapped secure storage to /home/jim/ 
+* Initial setup
 
 ```
+# Copy public.gpg and secret.gpg from airgapped secure storage to /home/jim/ before executing code
 
 sudo git clone https://github.com/Jimmy-sha256/ubuntu_setup.git
 
@@ -24,6 +25,8 @@ sudo chmod 777 setup.sh
 ./setup.sh
 ```
 
+* Pull repos / decrpyt archive folder
+
 ```
 cd
 
@@ -31,6 +34,8 @@ sudo chmod 777 pull_repos.sh
 
 ./pull_repos.sh
 ```
+
+* Install python 
 
 ```
 cd
