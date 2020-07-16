@@ -21,7 +21,6 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'qpkorr/vim-bufkill'
-Plug 'klen/python-mode'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'rakr/vim-one'
 call plug#end()
