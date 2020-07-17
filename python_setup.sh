@@ -14,7 +14,7 @@ sudo apt install virtualenv -y
 
 # Install Ipython
 
-sudo apt install ipython3
+sudo apt install ipython3 -y
 
 # Install pip
 
