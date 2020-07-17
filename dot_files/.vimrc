@@ -22,15 +22,14 @@ Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'qpkorr/vim-bufkill'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'rakr/vim-one'
+Plug 'sainnhe/edge'
 call plug#end()
 
 "---
 "plugin settings
 "---
 
-"colorscheme gruvbox
-colorscheme one
+colorscheme egde
 
 if (has("termguicolors"))
    set termguicolors
