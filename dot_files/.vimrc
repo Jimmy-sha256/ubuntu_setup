@@ -29,7 +29,7 @@ call plug#end()
 "plugin settings
 "---
 
-colorscheme egde
+colorscheme edge
 
 if (has("termguicolors"))
    set termguicolors
@@ -46,7 +46,7 @@ let g:vim_markdown_folding_disabled = 0
 "airline 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_theme='one'
+let g:airline_theme='edge'
 
 "pymode
 let g:pymode_folding = 0
