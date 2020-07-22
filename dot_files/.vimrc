@@ -24,6 +24,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'qpkorr/vim-bufkill'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'sainnhe/edge'
+Plug 'jmcantrell/vim-virtualenv'
+Plug '~/plugin_development/'
 call plug#end()
 
 "---
