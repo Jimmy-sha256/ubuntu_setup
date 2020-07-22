@@ -25,7 +25,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'sainnhe/edge'
 Plug 'jmcantrell/vim-virtualenv'
-Plug '~/plugin_development/'
+Plug 'jimmy-sha256/bettertree'
 call plug#end()
 
 "---
