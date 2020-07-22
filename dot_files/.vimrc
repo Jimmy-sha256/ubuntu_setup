@@ -1,3 +1,4 @@
+"
 "vim-plug
 "---
 
@@ -48,16 +49,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme='edge'
 
-"pymode
-let g:pymode_folding = 0
-let g:pymode_options_colorcolumn = 0
-let g:pymode_python = 'python3'
-let g:pymode_trim_whitespaces = 1
-let g:pymode_options = 1
-let g:pymode_indent = 1
-let g:pymode_virtualenv = 1
-let g:pymode_rope = 0
-
+"vim-virtualenv
+let g:virtualenv_directory = '.'
 
 "fuzzy finder
 command! -nargs=1 -bang Locate call fzf#run(fzf#wrap(
