@@ -53,7 +53,9 @@ let g:airline_theme='edge'
 
 "vim-virtualenv
 let g:virtualenv_directory = '.'
-nnoremap <Leader># :VirtualEnvActivate venv<CR>
+
+nnoremap <Leader>' :VirtualEnvActivate venv<CR>
+nnoremap <Leader># :call system('virtualenv --python=/usr/bin/python3.7 venv')<CR>
 
 "fuzzy finder
 command! -nargs=1 -bang Locate call fzf#run(fzf#wrap(
