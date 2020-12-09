@@ -57,6 +57,16 @@ let g:virtualenv_directory = '.'
 nnoremap <Leader>' :VirtualEnvActivate venv<CR>
 nnoremap <Leader># :call system('virtualenv --python=/usr/bin/python3.7 venv')<CR>
 
+function! PipInstall()
+    let prompt=input('pip3 install ') 
+    let var=join(['pip3 install', prompt], ' ')
+    call system(var)
+    echo ' '
+    let var=join([prompt, 'added to list'], ' ')
+    echo var
+endfunction
+
+
 "fuzzy finder
 command! -nargs=1 -bang Locate call fzf#run(fzf#wrap(
       \ {'source': 'locate <q-args>', 'options': '-m'}, <bang>0))
