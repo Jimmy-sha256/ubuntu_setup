@@ -3,6 +3,7 @@
 # pull repos
 git clone git@github.com:Jimmy-sha256/wiki.git
 git clone git@github.com:Jimmy-sha256/archive.git
+git clone git@github.com:Jimmy-sha256/orders.git
 
 # decrypt the .gpg
 gpg --decrypt /home/jim/archive/archive.gpg > /home/jim/archive.tar.gz
