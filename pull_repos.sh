@@ -6,8 +6,12 @@ git clone git@github.com:Jimmy-sha256/archive.git
 git clone git@github.com:Jimmy-sha256/orders.git
 
 # create venv for orders
-
 virtualenv --python=/usr/bin/python3.7 /home/jim/orders/venv
+
+# pip install python-binance
+source /home/jim/test/venv/bin/activate
+pip3 install python-binance
+deactivate
 
 # decrypt the .gpg
 gpg --decrypt /home/jim/archive/archive.gpg > /home/jim/archive.tar.gz
