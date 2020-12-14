@@ -128,6 +128,9 @@ set autoindent
 
 set path+=**
 
+"set no .swp file
+set noswapfile
+
 "open split to the right
 set splitright
 set splitbelow
