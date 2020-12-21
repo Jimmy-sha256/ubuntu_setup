@@ -6,7 +6,7 @@ git clone git@github.com:Jimmy-sha256/archive.git
 git clone git@github.com:Jimmy-sha256/binance_orders.git
 
 # create venv for orders
-virtualenv --python=/usr/bin/python3.7 /home/jim/orders/venv
+virtualenv --python=/usr/bin/python3.7 /home/jim/binance_orders/venv
 
 # pip install python-binance
 source /home/jim/binance_orders/venv/bin/activate
