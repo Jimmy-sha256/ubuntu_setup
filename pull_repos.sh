@@ -13,6 +13,9 @@ source /home/jim/binance_orders/venv/bin/activate
 pip3 install python-binance
 deactivate
 
+# give binance_orders.sh correct permissions
+chmod 777 /home/jim/binance_orders/binance_orders.sh
+
 # decrypt the .gpg
 gpg --decrypt /home/jim/archive/archive.gpg > /home/jim/archive.tar.gz
 
