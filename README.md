@@ -28,11 +28,7 @@ sudo chmod 777 setup.sh
 * Install python 
 
 ```
-cd
-
-sudo chmod 777 python_setup.sh
-
-./python_setup.sh
+sudo chmod 777 python_setup.sh && ./python_setup.sh
 ```
 
 
