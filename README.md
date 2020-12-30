@@ -25,16 +25,6 @@ sudo chmod 777 setup.sh
 ./setup.sh
 ```
 
-* Pull repos / decrpyt archive folder
-
-```
-cd
-
-sudo chmod 777 pull_repos.sh
-
-./pull_repos.sh
-```
-
 * Install python 
 
 ```
@@ -44,3 +34,11 @@ sudo chmod 777 python_setup.sh
 
 ./python_setup.sh
 ```
+
+
+* Pull repos / decrpyt archive folder
+
+```
+sudo chmod 777 pull_repos.sh && ./pull_repos.sh
+```
+
