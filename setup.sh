@@ -3,6 +3,8 @@
 sudo apt install vim-gtk3 -y
 sudo apt install curl -y
 sudo apt install keepassx -y
+sudo apt install fzf -y
+sudo apt install ripgrep -y
 
 # import keys - need copying from airgapped storage to home dir
 gpg --import /home/jim/secret.gpg
