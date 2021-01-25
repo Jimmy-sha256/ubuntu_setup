@@ -23,6 +23,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'qpkorr/vim-bufkill'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'sainnhe/edge'
 Plug 'jmcantrell/vim-virtualenv'
 Plug 'jimmy-sha256/bettertree'
