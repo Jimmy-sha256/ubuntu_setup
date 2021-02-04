@@ -3,18 +3,25 @@
 # pull repos
 git clone git@github.com:Jimmy-sha256/wiki.git
 git clone git@github.com:Jimmy-sha256/archive.git
+git@github.com:Jimmy-sha256/balance.git
 git clone git@github.com:Jimmy-sha256/binance_orders.git
 
+####
+
+cd /home/jim/balance/ && virtualenv --python=/usr/bin/python3.7 venv && pip install -r requirements.txt && deactivate && cd ..
+
 # create venv for orders
-virtualenv --python=/usr/bin/python3.7 /home/jim/binance_orders/venv
+# virtualenv --python=/usr/bin/python3.7 /home/jim/binance_orders/venv
 
 # pip install python-binance
-source /home/jim/binance_orders/venv/bin/activate
-pip3 install python-binance
-deactivate
+# source /home/jim/binance_orders/venv/bin/activate
+#pip3 install python-binance
+#deactivate
 
 # give binance_orders.sh correct permissions
-chmod 777 /home/jim/binance_orders/binance_orders.sh
+# chmod 777 /home/jim/binance_orders/binance_orders.sh
+
+chmod 777 /home/jim/balance/balance.sh
 
 # decrypt the .gpg
 gpg --decrypt /home/jim/archive/archive.gpg > /home/jim/archive.tar.gz
