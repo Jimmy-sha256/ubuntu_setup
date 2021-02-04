@@ -5,10 +5,15 @@ git clone git@github.com:Jimmy-sha256/wiki.git
 git clone git@github.com:Jimmy-sha256/archive.git
 git clone git@github.com:Jimmy-sha256/balance.git
 git clone git@github.com:Jimmy-sha256/binance_orders.git
+git clone git@github.com:Jimmy-sha256/deribit_orders.git
+git clone git@github.com:Jimmy-sha256/trade_calc.git
 
 ####
 
-cd /home/jim/balance/ && virtualenv --python=/usr/bin/python3.7 venv && pip install -r requirements.txt && deactivate && cd ..
+cd /home/jim/balance/ && virtualenv --python=/usr/bin/python3.7 venv && source venv/bin/activate && pip install -r requirements.txt && deactivate && cd ..
+cd /home/jim/deribit_orders/ && virtualenv --python=/usr/bin/python3.7 venv && source venv/bin/activate && pip install -r requirements.txt && deactivate && cd ..
+cd /home/jim/binance_orders/ && virtualenv --python=/usr/bin/python3.7 venv && source venv/bin/activate && pip install -r requirements.txt && deactivate && cd ..
+
 
 # create venv for orders
 # virtualenv --python=/usr/bin/python3.7 /home/jim/binance_orders/venv
@@ -22,6 +27,8 @@ cd /home/jim/balance/ && virtualenv --python=/usr/bin/python3.7 venv && pip inst
 # chmod 777 /home/jim/binance_orders/binance_orders.sh
 
 chmod 777 /home/jim/balance/balance.sh
+chmod 777 /home/jim/binance_orders/binance_orders.sh
+chmod 777 /home/jim/deribit_orders/deribit_order.sh
 
 # decrypt the .gpg
 gpg --decrypt /home/jim/archive/archive.gpg > /home/jim/archive.tar.gz
