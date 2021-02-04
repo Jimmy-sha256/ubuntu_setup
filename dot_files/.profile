@@ -28,6 +28,9 @@ fi
 
 ### Custom keyboard shortcuts
 
+### to save reasigned keyboard shortcuts excecute :-    dconf dump / > dconf-backup.dconf
+### to load dconf file excecute :-  dconf load / < dconf-backup.dconf
+
 # Vim 
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ name "'Vim'"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ binding "'<Primary><Alt>v'"
