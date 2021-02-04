@@ -41,6 +41,9 @@ gsettings set org.gnome.desktop.session idle-delay 0 # set power saving to never
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' # set dark theme
 gsettings set org.gnome.desktop.background picture-uri file:///home/jim/Pictures/background.jpg
 
+# load dconf file containing reasigned keyboard shortcuts
+dconf load / < /home/jim/ubuntu/config_files/dconf-backup.dconf
+
 # add apps to favourites
 # gsettings get org.gnome.shell favorite-apps # list favourite apps
 gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'org.gnome.Terminal.desktop', 'vim.desktop', 'org.gnome.Nautilus.desktop', 'keepassx.desktop']" # edit app thumbnails
