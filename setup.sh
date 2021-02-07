@@ -20,6 +20,7 @@ shred -u -n 33 -z /home/jim/secret.gpg
 cp /home/jim/ubuntu_setup/config_files/gpg-agent.conf /home/jim/.gnupg 
 cp /home/jim/ubuntu_setup/config_files/sshcontrol /home/jim/.gnupg 
 cp /home/jim/ubuntu_setup/config_files/gtk.css /home/jim/.config/gtk-3.0
+cp /home/jim/ubuntu_setup/config_files/dconf-backup.dconf /home/jim/dconf-backup.dconf
 
 # transfer dot files
 cp /home/jim/ubuntu_setup/dot_files/.bash_profile /home/jim/
@@ -41,14 +42,15 @@ gsettings set org.gnome.desktop.session idle-delay 0 # set power saving to never
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' # set dark theme
 gsettings set org.gnome.desktop.background picture-uri file:///home/jim/Pictures/background.jpg
 
-# load dconf file containing reasigned keyboard shortcuts
-dconf load / < /home/jim/ubuntu/config_files/dconf-backup.dconf
-
 # add apps to favourites
 # gsettings get org.gnome.shell favorite-apps # list favourite apps
 gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'org.gnome.Terminal.desktop', 'vim.desktop', 'org.gnome.Nautilus.desktop', 'keepassx.desktop']" # edit app thumbnails
 
 dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors false # disable terminal theme colors
+
+# load dconf file containing reasigned keyboard shortcuts
+sudo dconf load / < dconf-backup.dconf
+sudo rm dconf-backup.dconf
 
 # copy repos script into home directory
 cp /home/jim/ubuntu_setup/pull_repos.sh /home/jim/
