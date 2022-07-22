@@ -4,7 +4,6 @@
 
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install git
-
 ```
 
 * Initial setup copy public.gpg and secret.gpg from airgapped secure storage to /home/jim/ before executing code
