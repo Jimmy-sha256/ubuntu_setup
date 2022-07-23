@@ -6,7 +6,7 @@
 sudo apt update && sudo apt upgrade -y && sudo apt install git
 ```
 
-* Unlock USB with gpg keys
+* Unlock USB containing gpg keys
 
 ```
 sudo git clone https://github.com/Jimmy-sha256/ubuntu_setup.git
