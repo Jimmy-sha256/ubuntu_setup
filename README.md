@@ -1,12 +1,14 @@
 # ubuntu_setup
 
+# Unlock USB containing gpg keys
+
 * Initial update
 
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install git
 ```
 
-* Unlock USB containing gpg keys
+* Pull ubuntu_setup repositroy
 
 ```
 sudo git clone https://github.com/Jimmy-sha256/ubuntu_setup.git
