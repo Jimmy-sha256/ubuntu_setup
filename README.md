@@ -1,8 +1,5 @@
-# ubuntu_setup
+# Unlock USB containing gpg keys
 
----
-## Unlock USB containing gpg keys
----
 
 * Initial update
 
