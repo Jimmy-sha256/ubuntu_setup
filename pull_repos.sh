@@ -10,9 +10,9 @@ git clone git@github.com:Jimmy-sha256/trade_calc.git
 
 ####
 
-#cd /home/jim/balance/ && virtualenv --python=/usr/bin/python3.8 venv && source venv/bin/activate && pip install -r requirements.txt && deactivate && cd ..
-#cd /home/jim/deribit_orders/ && virtualenv --python=/usr/bin/python3.8 venv && source venv/bin/activate && pip install -r requirements.txt && deactivate && cd ..
-#cd /home/jim/binance/ && virtualenv --python=/usr/bin/python3.8 venv && source venv/bin/activate && pip install -r requirements.txt && deactivate && cd ..
+#cd /home/jim/balance/ && virtualenv --python=/usr/bin/python3.10 venv && source venv/bin/activate && pip install -r requirements.txt && deactivate && cd ..
+#cd /home/jim/deribit_orders/ && virtualenv --python=/usr/bin/python3.10 venv && source venv/bin/activate && pip install -r requirements.txt && deactivate && cd ..
+#cd /home/jim/binance/ && virtualenv --python=/usr/bin/python3.10 venv && source venv/bin/activate && pip install -r requirements.txt && deactivate && cd ..
 
 
 #chmod 777 /home/jim/balance/balance.sh
