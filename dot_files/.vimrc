@@ -1,7 +1,3 @@
-"
-"vim-plug
-"---
-
 ""required for vim-plug 
 set nocompatible
 filetype plugin on
@@ -20,18 +16,27 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-Plug 'tpope/vim-fugitive'
-Plug 'qpkorr/vim-bufkill'
+"Plug 'tpope/vim-fugitive'
+"Plug 'qpkorr/vim-bufkill'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'sainnhe/edge'
 Plug 'jmcantrell/vim-virtualenv'
-Plug 'jimmy-sha256/bettertree'
+"Plug 'jimmy-sha256/bettertree'
 call plug#end()
 
-"---
+"----------------------------------------------------------------------------------------------------
 "plugin settings
+"----------------------------------------------------------------------------------------------------
+
 "---
+"vim-airline colour theme
+"---
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+let g:airline_theme='edge'
 
 colorscheme edge
 
@@ -41,22 +46,32 @@ endif
 
 syntax on
 
+
+"---
 "markdown plasticboy settings
+"---
+
 autocmd FileType markdown normal zM
 autocmd FileType markdown set conceallevel=2
 let g:vim_markdown_folding_style_pythonic = 1
 let g:vim_markdown_folding_disabled = 0
 
-"airline 
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline_theme='edge'
 
+"---
 "vim-virtualenv
+"---
+
 let g:virtualenv_directory = '.'
 
+"function to change dir if furrent dir not contain venv/
+function! VenvCD()
+    let g:virtualenv_directory = getcwd()
+endfunction
+
+"map venv keys
 nnoremap <Leader>' :VirtualEnvActivate venv<CR>
-nnoremap <Leader># :call system('virtualenv --python=/usr/bin/python3.7 venv')<CR>
+nnoremap <Leader># :call system('virtualenv --python=/usr/bin/python3.10 venv')<CR>
+
 
 function! PipInstall()
     let prompt=input('pip3 install ') 
@@ -68,10 +83,17 @@ function! PipInstall()
 endfunction
 
 
+"---
 "fuzzy finder
+"---
+
+" https://github.com/junegunn/fzf.vim
 command! -nargs=1 -bang Locate call fzf#run(fzf#wrap(
       \ {'source': 'locate <q-args>', 'options': '-m'}, <bang>0))
 
+
+" Ctrl p
+nmap <c-p> :FZF~<CR>  
 
 function! s:copy_results(lines)
   let joined_lines = join(a:lines, "\n")
@@ -111,113 +133,126 @@ let g:fzf_action = {
 "---
 "general settings
 "---
-
+set noshowmode
+set encoding=utf-8
+set cursorline
+set cursorcolumn
 set cmdheight=2
-
 set pythondll=/usr/bin/python
 set pythonthreedll=/usr/bin/python3
 set pythonthreehome=/usr
-
 set nohidden
-
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
-filetype indent on
 set autoindent
-
 set path+=**
-
-"set no .swp file
-set noswapfile
-
-"open split to the right
-set splitright
-set splitbelow
-
-"save prompt
-set confirm
-
-"yank to system clipboard
-set clipboard=unnamedplus
-
-"disable Welcome message
-set shortmess=I
-
-"line numbering
-set number relativenumber
+set noswapfile "set no .swp file
+set splitright "open split to the right
+set splitbelow "open split to the below
+set confirm "save prompt
+set autochdir "automatically chnge the current directory
+set clipboard=unnamedplus "yank to system clipboard
+set shortmess=I "disable Welcome message
+set number relativenumber "line numbering
  
-augroup numbertoggle
- autocmd!
- autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
- autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-augroup END
 
 "search highlight
 set ignorecase
 set hlsearch
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
-"automatically chnge the current directory
-set autochdir
 
 "---
 "custom key shortcuts
 "---
 
+let mapleader = "\<Space>"
+
 "insert mode remaps
-imap ii <Esc> 
-imap jj <Down>
-imap kk <Up>
+imap ii <Esc>
 
-"window navigations
-nnoremap <Leader>j :wincmd j<CR>    
-nnoremap <Leader>k :wincmd k<CR>
-nnoremap <Leader>l :wincmd l<CR>
-nnoremap <Leader>h :wincmd h<CR>
-
-nmap <Right> :wincmd l<CR>
-nmap <Left> :wincmd h<CR>
-nmap <Up> :wincmd k<CR>
-nmap <Down> :wincmd j<CR>
-
-nmap <c-p> :FZF~<CR>
-
-"list buffers
-nnoremap <Leader>, :bp<CR>
-nnoremap <Leader>. :bn<CR>
+noremap <Leader>f :Files<CR>
 
 "insert date
 nnoremap <Leader>d :put =strftime(\"%d/%m/%y\")<CR> 
 
-"save
-nnoremap <Leader>s :w <bar> :mkview<CR>
-
 "markdown preview
 nnoremap <Leader>p :MarkdownPreview<CR>
-
-"nerd tree shortcut
-nnoremap <Leader>ii :NERDTreeFocus<CR>
-nnoremap <Leader>i :NERDTreeToggle <bar> :wincmd =<CR>
 
 "jump list
 nnoremap <Leader>] :jumps<CR>
 
 "buffers
-noremap <Leader>n :enew<CR>
+noremap <Leader>n :split -o<CR>
 noremap <Leader>v :vnew<CR>
-noremap <Leader>c :Only<CR> 
-noremap <Leader>q :qa<CR>
-
-"command
-nnoremap <Leader>/ :
 
 "auto-complete
 inoremap hh <C-p>
 
 "terminal
-nnoremap <Leader>t :term ++curwin ++close<CR>
+nnoremap <Leader>t :term ++curwin<CR>
+"nnoremap <Leader>t :term ++curwin ++close<CR>
+
+"---
+"Switch back to NORMAL mode after 15 secs
+"---
+
+augroup numbertoggle
+ autocmd!
+ autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+ autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
+function! CursorModeOn()
+    set cursorline
+    set cursorcolumn
+endfunction
+
+
+function! CursorModeOff()
+    set nocursorline
+    set nocursorcolumn
+endfunction
+
+
+augroup cursor_show
+au CursorMovedI,InsertEnter,BufLeave,WinLeave  * call CursorModeOff() 
+
+au InsertLeave,InsertLeave,BufEnter,WinEnter  * call CursorModeOn()
+augroup END
+
+" Exit insert mode after 30 secs with no cursor movement
+let g:inactivity_limit = 10  " max Insert mode inactivity before fail, in seconds
+let g:check_frequency = 1    " seconds between checks
+
+augroup monitor
+    au!
+    " when vim starts kick off the infinitely repeating calls to the monitor function
+    au VimEnter * call timer_start(g:check_frequency * 1000, 'MonitorActivity', {'repeat' : -1})
+    " when cursor moves in Insert mode update the last activity time
+    au CursorMovedI * let g:last_activity = reltime()
+augroup END
+
+func! MonitorActivity(timer_id)
+    " when we start we'll initialize the last activity time then return
+    " ...gives a little grace period at beginning
+    if ! exists('g:last_activity') || empty(g:last_activity)
+        let g:last_activity = reltime()
+        return
+    endif
+
+
+    " very handy function for our purposes, reltime
+    let l:diff = reltime(g:last_activity)[0]
+
+    if l:diff > g:inactivity_limit
+        stopinsert
+        let g:last_activity = []
+        call CursorModeOn()
+    endif
+endfunc
+
 
 "toggle run python script
 let s:py_buf_nr = -1
@@ -270,3 +305,6 @@ function SearchReplace()
     let replace_pattern=input('Enter new string : ')
     exec '%s/'.search_pattern.'/'.replace_pattern.'/gc'
 endfunction
+
+
+
