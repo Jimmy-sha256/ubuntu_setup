@@ -37,7 +37,7 @@ cp /home/jim/ubuntu_setup/background.jpg /home/jim/Pictures/
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
 gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 35
-gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']" # replace caps with ctrl
+#gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']" # replace caps with ctrl
 gsettings set org.gnome.desktop.session idle-delay 0 # set power saving to never
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' # set dark theme
 gsettings set org.gnome.desktop.background picture-uri file:///home/jim/Pictures/background.jpg
