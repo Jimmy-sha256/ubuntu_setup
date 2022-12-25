@@ -7,7 +7,7 @@ sudo apt install fzf -y
 sudo apt install ripgrep -y
 
 # python
-sudo add-apt-repository ppa:deadsnakes/ppa
+sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo apt install virtualenv -y
 sudo apt install ipython3 -y
 
