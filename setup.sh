@@ -6,6 +6,11 @@ sudo apt install keepassx -y
 sudo apt install fzf -y
 sudo apt install ripgrep -y
 
+# python
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt install virtualenv -y
+sudo apt install ipython3 -y
+
 # import keys - need copying from airgapped storage to home dir
 gpg --import /media/jim/GPG_SUB_KEYS/secret.gpg
 gpg --import /media/jim/GPG_SUB_KEYS/public.gpg
