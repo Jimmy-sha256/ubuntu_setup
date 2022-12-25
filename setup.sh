@@ -51,7 +51,7 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/jim/Pictures
 # gsettings get org.gnome.shell favorite-apps # list favourite apps
 gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'keepassx.desktop']" # edit app thumbnails
 
-dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors false # disable terminal theme colors
+#dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors false # disable terminal theme colors
 
 # load dconf file containing reasigned keyboard shortcuts
 #sudo dconf load / < dconf-backup.dconf
