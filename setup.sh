@@ -18,8 +18,7 @@ gpg --import /media/jim/GPG_SUB_KEYS/public.gpg
 # set the keys trust level 
 echo -e "5\ny\n" |  gpg --command-fd 0 --expert --edit-key D5557B332830404939C27D578CEDDB5272262D4C trust
 
-#shred -u -n 33 -z /home/jim/public.gpg
-#shred -u -n 33 -z /home/jim/secret.gpg
+# 
 
 # transfer config files
 cp /home/jim/ubuntu_setup/config_files/gpg-agent.conf /home/jim/.gnupg 
