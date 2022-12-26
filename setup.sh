@@ -22,7 +22,7 @@ echo -e "5\ny\n" |  gpg --command-fd 0 --expert --edit-key D5557B332830404939C27
 cp /home/jim/ubuntu_setup/config_files/gpg-agent.conf /home/jim/.gnupg 
 cp /home/jim/ubuntu_setup/config_files/sshcontrol /home/jim/.gnupg 
 cp /home/jim/ubuntu_setup/config_files/gtk.css /home/jim/.config/gtk-3.0
-cp /home/jim/ubuntu_setup/config_files/dconf-backup.dconf /home/jim/dconf-backup.dconf
+
 
 # transfer dot files
 cp /home/jim/ubuntu_setup/dot_files/.bash_profile /home/jim/
