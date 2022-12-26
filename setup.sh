@@ -58,11 +58,11 @@ gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'org.gn
 #sudo rm dconf-backup.dconf
 
 # copy repos script into home directory
-cp /home/jim/ubuntu_setup/pull_repos.sh /home/jim/
-cp /home/jim/ubuntu_setup/python_setup.sh /home/jim/
+#cp /home/jim/ubuntu_setup/pull_repos.sh /home/jim/
+#cp /home/jim/ubuntu_setup/python_setup.sh /home/jim/
 
 # remove setup folder
-sudo rm -rf /home/jim/ubuntu_setup/
+#sudo rm -rf /home/jim/ubuntu_setup/
 
 reboot
 
