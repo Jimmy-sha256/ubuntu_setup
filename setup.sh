@@ -53,6 +53,7 @@ gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'org.gn
 
 #dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors false # disable terminal theme colors
 
+sudo dconf load /home/jim/ubuntu_setup/config_files/dconf-backup.txt
 # load dconf file containing reasigned keyboard shortcuts
 #sudo dconf load / < dconf-backup.dconf
 #sudo rm dconf-backup.dconf
