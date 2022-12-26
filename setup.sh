@@ -53,7 +53,7 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/jim/Pictures
 gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'keepassx.desktop']" # edit app thumbnails
 
 # load dconf file containing reasigned keyboard shortcuts
-sudo dconf load / < /home/jim/ubuntu_setup/config_files/dconf_backup.txt
+dconf load / < /home/jim/ubuntu_setup/config_files/dconf_backup.txt
 
 # pull repos
 git clone git@github.com:Jimmy-sha256/encrypted_archive.git
