@@ -56,8 +56,8 @@ gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'org.gn
 dconf load / < /home/jim/ubuntu_setup/config_files/dconf_backup.txt
 
 # pull repos
-git clone git@github.com:Jimmy-sha256/encrypted_archive.git
-git clone git@github.com:Jimmy-sha256/trade_calc.git
+#git clone git@github.com:Jimmy-sha256/encrypted_archive.git
+#git clone git@github.com:Jimmy-sha256/trade_calc.git
 
 # decrypt the .gpg
 #gpg --decrypt /home/jim/encrypted_archive/archive.gpg > /home/jim/archive.tar.gz
