@@ -55,12 +55,22 @@ gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'org.gn
 # load dconf file containing reasigned keyboard shortcuts
 sudo dconf load / < /home/jim/ubuntu_setup/config_files/dconf-backup.txt
 
-# copy repos script into home directory
-#cp /home/jim/ubuntu_setup/pull_repos.sh /home/jim/
-#cp /home/jim/ubuntu_setup/python_setup.sh /home/jim/
+# pull repos
+git clone git@github.com:Jimmy-sha256/encrypted_archive.git
+git clone git@github.com:Jimmy-sha256/trade_calc.git
+
+# decrypt the .gpg
+gpg --decrypt /home/jim/encrypted_archive/archive.gpg > /home/jim/archive.tar.gz
+
+# extract archive
+tar -xzvf archive.tar.gz
+
+# remove archive.tar.gz
+shred -u -n 33 -z archive.tar.gz
+
 
 # remove setup folder
-#sudo rm -rf /home/jim/ubuntu_setup/
+sudo rm -rf /home/jim/ubuntu_setup/
 
 reboot
 
