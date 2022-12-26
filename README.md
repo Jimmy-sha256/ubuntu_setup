@@ -1,4 +1,4 @@
-### Unlock USB containing gpg keys
+### Unlock USB Containing GPG Keys
 ---
 
 
