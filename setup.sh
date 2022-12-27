@@ -19,12 +19,12 @@ gpg --import /media/jim/GPG_SUB_KEYS/public.gpg
 echo -e "5\ny\n" |  gpg --command-fd 0 --expert --edit-key D5557B332830404939C27D578CEDDB5272262D4C trust
 
 # create .ssh dir
-mkdir ~/.ssh
-chmod 700 ~/.ssh
+#mkdir ~/.ssh
+#chmod 700 ~/.ssh
 
 
 # transfer config files
-cp /home/jim/ubuntu_setup/config_files/known_hosts /home/jim/.ssh/known_hosts 
+#cp /home/jim/ubuntu_setup/config_files/known_hosts /home/jim/.ssh/known_hosts 
 cp /home/jim/ubuntu_setup/config_files/gpg-agent.conf /home/jim/.gnupg 
 cp /home/jim/ubuntu_setup/config_files/sshcontrol /home/jim/.gnupg 
 cp /home/jim/ubuntu_setup/config_files/gtk.css /home/jim/.config/gtk-3.0
@@ -56,8 +56,7 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/jim/Pictures
 gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'keepassx.desktop']" # edit app thumbnails
 
 # pull repos
-git clone git@github.com:Jimmy-sha256/encrypted_archive.git
-git clone git@github.com:Jimmy-sha256/trade_calc.git
+git clone https://github.com/Jimmy-sha256/encrypted_archive.git
 
 # decrypt the .gpg
 gpg --decrypt /home/jim/encrypted_archive/archive.gpg > /home/jim/archive.tar.gz
