@@ -55,9 +55,11 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/jim/Pictures
 # gsettings get org.gnome.shell favorite-apps # list favourite apps
 gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'keepassx.desktop']" # edit app thumbnails
 
+# copy repos script into home directory
+cp /home/jim/ubuntu_setup/pull_repos.sh /home/jim/
 
 # remove setup folder
-#sudo rm -rf /home/jim/ubuntu_setup/
+sudo rm -rf /home/jim/ubuntu_setup/
 
 reboot
 
