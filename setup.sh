@@ -19,7 +19,8 @@ gpg --import /media/jim/GPG_SUB_KEYS/public.gpg
 echo -e "5\ny\n" |  gpg --command-fd 0 --expert --edit-key D5557B332830404939C27D578CEDDB5272262D4C trust
 
 # create .ssh dir
-mkdir .ssh
+mkdir ~/.ssh
+chmod 700 ~/.ssh
 
 # create known_hosts file add github.com
 echo "|1|0i6WxRGmlbEebLZPeII2XIH4g2U=|OS34x2x8Iz3DB/rwRak/R0iikGs= ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl" \
