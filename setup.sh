@@ -55,20 +55,9 @@ gsettings set org.gnome.desktop.background picture-uri file:///home/jim/Pictures
 # gsettings get org.gnome.shell favorite-apps # list favourite apps
 gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'keepassx.desktop']" # edit app thumbnails
 
-# pull repos
-git clone https://github.com/Jimmy-sha256/encrypted_archive.git
-
-# decrypt the .gpg
-gpg --decrypt /home/jim/encrypted_archive/archive.gpg > /home/jim/archive.tar.gz
-
-# extract archive
-tar -xzvf archive.tar.gz
-
-# remove archive.tar.gz
-shred -u -n 33 -z archive.tar.gz
 
 # remove setup folder
-sudo rm -rf /home/jim/ubuntu_setup/
+#sudo rm -rf /home/jim/ubuntu_setup/
 
 reboot
 
