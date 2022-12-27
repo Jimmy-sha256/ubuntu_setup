@@ -22,11 +22,9 @@ echo -e "5\ny\n" |  gpg --command-fd 0 --expert --edit-key D5557B332830404939C27
 mkdir ~/.ssh
 chmod 700 ~/.ssh
 
-# create known_hosts file add github.com
-echo "|1|0i6WxRGmlbEebLZPeII2XIH4g2U=|OS34x2x8Iz3DB/rwRak/R0iikGs= ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl" \
->> .ssh/known_hosts
 
 # transfer config files
+cp /home/jim/ubuntu_setup/config_files/known_hosts /home/jim/.ssh/known_hosts 
 cp /home/jim/ubuntu_setup/config_files/gpg-agent.conf /home/jim/.gnupg 
 cp /home/jim/ubuntu_setup/config_files/sshcontrol /home/jim/.gnupg 
 cp /home/jim/ubuntu_setup/config_files/gtk.css /home/jim/.config/gtk-3.0
