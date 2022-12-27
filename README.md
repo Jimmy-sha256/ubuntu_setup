@@ -19,3 +19,9 @@ sudo git clone https://github.com/Jimmy-sha256/ubuntu_setup.git
 ```
 cd ubuntu_setup && sudo chmod 777 setup.sh && ./setup.sh
 ```
+
+* Pull Repositories
+
+```
+sudo chmod 777 pull_repos.sh && ./pull_repos.sh
+```
