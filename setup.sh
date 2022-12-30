@@ -5,6 +5,7 @@ sudo apt install curl -y
 sudo apt install keepassx -y
 sudo apt install fzf -y
 sudo apt install ripgrep -y
+sudo apt-get install kleopatra -y
 
 # python
 sudo add-apt-repository ppa:deadsnakes/ppa -y
