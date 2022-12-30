@@ -5,6 +5,8 @@ sudo apt install curl -y
 sudo apt install keepassx -y
 sudo apt install fzf -y
 sudo apt install ripgrep -y
+
+# allow shared folder access to host
 sudo adduser $USER vboxsf
 
 
